@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://bashubb.github.io/TheShrink/sitemap.xml
+Sitemap: https://bashubb.com/shrink/sitemap.xml
