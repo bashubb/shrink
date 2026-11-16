@@ -287,3 +287,47 @@ footer{padding:48px 0 calc(40px + env(safe-area-inset-bottom));font-size:.92rem}
   .away-ufo{transform:rotate(-12deg);opacity:1}
   .ufo-fly{transform:none}
 }
+
+/* PDF: the pill in the hero and the card of the PDF section (the app's own size keys and ratings). */
+.new-pill{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;padding:6px 14px 6px 6px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--text);font-weight:650;font-size:.92rem;text-decoration:none}
+.new-pill b{padding:3px 10px;border-radius:999px;background:var(--yellow);color:var(--ink);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.new-pill:hover{border-color:var(--violet)}
+.pdf-art{padding:12px}
+.pdf-card{width:min(420px,100%);padding:22px;border-radius:28px;background:#F4F5FA;color:#12141C;box-shadow:0 40px 90px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.06);transform:rotate(1.5deg)}
+.pdf-file{display:flex;gap:14px;align-items:center;padding:14px;border-radius:20px;background:#fff;box-shadow:0 6px 18px rgba(18,20,28,.08)}
+.pdf-file div{display:grid;gap:2px;min-width:0}
+.pdf-file strong{font-size:1rem}
+.pdf-file span{color:#5B6075;font-size:.9rem}
+.pdf-file em{font-style:normal;justify-self:start;margin-top:4px;padding:2px 10px;border-radius:8px;background:#E9EBF3;font-size:.78rem;font-weight:650}
+.pdf-thumb{flex:none;width:46px;height:60px;border-radius:6px;background:repeating-linear-gradient(#fff 0 6px,#12141C 6px 8px) 8px 10px/30px 24px no-repeat,#fff;box-shadow:0 3px 10px rgba(18,20,28,.2)}
+.pdf-label{margin:22px 0 10px;font-weight:800;font-size:1rem}
+.pdf-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.pdf-keys .k{display:grid;gap:2px;justify-items:center;padding:12px 4px;border-radius:14px;background:#fff;font-size:.78rem;box-shadow:0 4px 12px rgba(18,20,28,.06)}
+.pdf-keys .k b{font-size:.95rem}
+.pdf-keys .bad{opacity:.62}.pdf-keys .bad span{color:#C0504D}
+.pdf-keys .warn span{color:#B3261E}
+.pdf-keys .on{background:#12141C;color:#fff}
+.pdf-go{margin-top:22px;padding:16px;border-radius:16px;background:var(--yellow);color:var(--ink);text-align:center;font-weight:800}
+@media (max-width:760px){.pdf-card{transform:none}}
+
+/* Photos and PDFs side by side: the two sources and the three PDF rows. */
+.section.tight{padding-block:24px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.source{display:grid;gap:10px;align-content:start;padding:28px;border-radius:28px;background:var(--card);border:1px solid var(--line);text-decoration:none;transition:border-color .2s var(--ease),transform .2s var(--ease)}
+.source:hover{border-color:var(--violet);transform:translateY(-2px)}
+.source-ic{display:grid;place-items:center;width:52px;height:52px;border-radius:16px;background:rgba(142,108,255,.16);color:var(--yellow)}
+.source-ic svg{width:28px;height:28px}
+.source h2{font-size:clamp(1.8rem,3.2vw,2.4rem)}
+.source p{max-width:30em}
+.source-go{color:var(--text);font-weight:700;margin-top:6px}
+.pdf-label.first{margin-top:0}
+.pdf-seg{display:grid;grid-template-columns:1fr 1fr;padding:5px;border-radius:16px;background:#E4E6F0;text-align:center;font-weight:700;font-size:.95rem}
+.pdf-seg span{padding:12px 6px;border-radius:12px}.pdf-seg .on{background:#12141C;color:#fff}
+.pdf-note{margin-top:14px;font-size:.88rem;color:#5B6075}
+.pdf-note.i{display:flex;gap:10px}.pdf-note b{flex:none;display:grid;place-items:center;width:18px;height:18px;border:1.5px solid #5B6075;border-radius:50%;font-size:.7rem;font-style:italic}
+.pdf-fits{font-weight:800;font-size:1.5rem;letter-spacing:-.02em}
+.pdf-sizes{margin:6px 0 18px;font-weight:800;font-size:2rem;letter-spacing:-.03em;display:flex;align-items:baseline;gap:12px}
+.pdf-sizes small{font-size:1.2rem;color:#5B6075;text-decoration:line-through}.pdf-sizes span{color:#1E8E4E}
+.pdf-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pdf-btns span{padding:14px 8px;border-radius:14px;background:#fff;text-align:center;font-weight:700;box-shadow:0 4px 12px rgba(18,20,28,.06)}
+.pdf-btns + .pdf-go{margin-top:12px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
