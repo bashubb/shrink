@@ -137,6 +137,9 @@ p{color:var(--muted);text-wrap:pretty}
 .row{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:56px}
 .row + .row{margin-top:110px}
 .row.flip .row-art{order:2}
+.row.solo{grid-template-columns:minmax(0,640px);justify-content:start}
+.row.solo .list{margin:18px 0 0;padding-left:1.1em;list-style:disc}
+.row.solo .list li{margin:6px 0}
 .row-copy h2{margin-bottom:18px}
 .row-art{display:grid;place-items:center;perspective:1400px;position:relative}
 .device{width:min(300px,72%)}
