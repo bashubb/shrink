@@ -73,25 +73,22 @@
   }, { threshold: 0.25, rootMargin: '0px 0px -6% 0px' });
   document.querySelectorAll('[data-in]').forEach((el) => seen.observe(el));
 
-  // Percent counter on the result card.
-  const pct = document.querySelector('[data-count]');
-  if (pct) {
+  // Percent counter on each result card (photos and PDFs).
+  document.querySelectorAll('[data-count]').forEach((pct) => {
     const target = Number(pct.dataset.count);
-    if (still) pct.textContent = target;
-    else {
-      const once = new IntersectionObserver((entries) => {
-        if (!entries[0].isIntersecting) return;
-        once.disconnect();
-        const start = performance.now() + 900;
-        const step = (now) => {
-          const t = Math.min(Math.max((now - start) / 900, 0), 1);
-          pct.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));
-          if (t < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-      }, { threshold: 0.6 });
-      once.observe(pct);
-    }
-  }
+    if (still) { pct.textContent = target; return; }
+    const once = new IntersectionObserver((entries) => {
+      if (!entries[0].isIntersecting) return;
+      once.disconnect();
+      const start = performance.now() + 900;
+      const step = (now) => {
+        const t = Math.min(Math.max((now - start) / 900, 0), 1);
+        pct.textContent = Math.round(target * (1 - Math.pow(1 - t, 3)));
+        if (t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }, { threshold: 0.6 });
+    once.observe(pct);
+  });
   root.classList.add('js');
 })();

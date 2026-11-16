@@ -26,8 +26,8 @@
 <link rel="icon" href="assets/fav/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/fav/apple-touch-icon.png">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="assets/shrink.css?v=5">
-<script src="assets/shrink.js?v=1" defer></script>
+<link rel="stylesheet" href="assets/shrink.css?v=6">
+<script src="assets/shrink.js?v=9" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "@id": "https://bashubb.com/shrink/#app", "name": "Photo Compressor - Shrink", "url": "https://bashubb.com/shrink/", "downloadUrl": "https://apps.apple.com/app/id6804833389", "image": "https://bashubb.com/shrink/assets/app-icon-512.webp", "operatingSystem": "iOS 26.0 or later", "applicationCategory": "MultimediaApplication", "softwareVersion": "1.0", "author": {"@type": "Person", "name": "Hubert Kielkowski"}, "description": "Compress up to 20 iPhone photos, or a PDF, to a chosen maximum file size with on-device processing. Three free exports, then a one-time unlock.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": "https://apps.apple.com/us/app/id6804833389", "description": "Free download with three free exports. A one-time in-app purchase unlocks unlimited compression; pricing varies by storefront."}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I reduce photo file size on iPhone?", "acceptedAnswer": {"@type": "Answer", "text": "Choose your photos in Shrink, set a maximum size, then tap Compress. Review the result and save or share the smaller copy."}}, {"@type": "Question", "name": "Can I compress a photo to 200 KB or 500 KB?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both sizes are built-in presets. Each sets a maximum per photo; the final file can be smaller. Check any separate format or dimension requirements before uploading."}}, {"@type": "Question", "name": "How do I make a photo smaller than 1 MB?", "acceptedAnswer": {"@type": "Answer", "text": "Select the 1 MB preset and compress. For a different limit, use 2 MB or Custom Size. A strict upload boundary may need a little margin below the stated limit."}}, {"@type": "Question", "name": "Can I compress several photos at once?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, up to 20 photos per batch. Your chosen maximum applies to every photo individually, so the combined batch can exceed that size."}}, {"@type": "Question", "name": "Will compression affect image quality?", "acceptedAnswer": {"@type": "Answer", "text": "It can. Shrink adjusts quality and, when needed, dimensions to fit your limit. Use the largest permitted target and review important detail. Photos already below the target are left unchanged."}}, {"@type": "Question", "name": "Are my photos uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. Photo compression happens on your iPhone. Locally available photos can be compressed offline. Purchases and restoring access may require a connection."}}, {"@type": "Question", "name": "Can Shrink compress PDFs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Pick a PDF from Files, set one size target for the whole file, and choose color or black & white. Shrink shows a readability rating for each size, and you can preview the pages before saving. PDFs of up to 200 pages work, and you can save to Files or share the result."}}, {"@type": "Question", "name": "Is my PDF uploaded anywhere?", "acceptedAnswer": {"@type": "Answer", "text": "No. PDFs are compressed on your iPhone, and this also works in Airplane Mode. Your file is saved only where you choose, in Files or wherever you share it."}}, {"@type": "Question", "name": "Will a PDF still be readable?", "acceptedAnswer": {"@type": "Answer", "text": "Often, but it depends on the file. Scans shrink the most. A PDF made of real text becomes page images, and Shrink asks before doing that. Each size shows a readability rating, and you can preview the pages before saving. Digital signatures are not kept, and Shrink warns you before it touches a signed file."}}, {"@type": "Question", "name": "Why is my photo still rejected after compression?", "acceptedAnswer": {"@type": "Answer", "text": "The form may also require a particular format, dimensions, or a combined size limit. Confirm you selected the exported copy, then check the full upload requirements."}}, {"@type": "Question", "name": "Is Shrink free, or is there a subscription?", "acceptedAnswer": {"@type": "Answer", "text": "Your first three exports are free. A one-time purchase unlocks unlimited compression, with no subscription and no ads. Requires iPhone with iOS 26 or later."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Shrink", "alternateName": ["Shrink App", "The Shrink"], "url": "https://bashubb.com/shrink/"}</script>
 </head>
 <body>
@@ -144,57 +144,36 @@
 <section class="section" id="pdf" aria-label="How PDFs work">
   <div class="wrap">
     <div class="row" data-in>
-      <div class="row-art pdf-art" role="img" aria-label="The PDF screen of Shrink: a target size for the file, each size with a readability rating">
-        <div class="pdf-card">
-          <div class="pdf-file"><span class="pdf-thumb" aria-hidden="true"></span><div><strong>Application-scan.pdf</strong><span>12 pages · 8.4 MB</span><em>Scanned pages</em></div></div>
-          <div class="pdf-label">Target size for the file</div>
-          <div class="pdf-keys">
-            <div class="k bad"><b>200 KB</b><span>Unreadable</span></div>
-            <div class="k bad"><b>500 KB</b><span>Unreadable</span></div>
-            <div class="k warn"><b>1 MB</b><span>Blurry</span></div>
-            <div class="k on"><b>2 MB</b><span>Readable</span></div>
-          </div>
-          <div class="pdf-go">Compress</div>
-        </div>
-      </div>
+      <div class="row-art"><div class="halo"></div><img class="device" src="assets/media/iphone-pdf-limit-light.webp" width="720" height="1469" alt="Shrink with a 12-page PDF chosen: the 2 MB target is selected and each size shows a readability rating" loading="lazy" decoding="async"></div>
       <div class="row-copy rise">
         <span class="eyebrow">PDFs · Step 1 · Your limit</span>
-        <h2 id="pdf-title">One limit. <em>The whole PDF fits under it.</em></h2>
-        <p class="lede">A portal asks for 2 MB, so you choose 2 MB. The limit is for the whole file, and each size shows how readable your pages stay, so you see the trade before you compress.</p>
-        <p class="keys-note">Pick a PDF from Files. Up to 200 pages.</p>
+        <h2 id="pdf-title">Set the limit. <em>The whole PDF fits under it.</em></h2>
+        <p class="lede">A portal asks for 2 MB, so you choose 2 MB. The limit is for the whole file, and each size shows how readable your pages stay, so you see the trade before you compress. Color or black &amp; white is your call: black &amp; white keeps a scan sharp at a much smaller size.</p>
+        <p class="keys-note">Pick a PDF from Files, up to 200 pages.</p>
       </div>
     </div>
 
     <div class="row flip" data-in>
-      <div class="row-art pdf-art" role="img" aria-label="The page look setting: color or black and white, with a note that black and white makes text about four times smaller">
-        <div class="pdf-card">
-          <div class="pdf-label first">Page look</div>
-          <div class="pdf-seg"><span class="on">Color</span><span>Black &amp; white</span></div>
-          <p class="pdf-note">Black &amp; white makes text about 4× smaller: 500 KB would be readable. It flattens photos.</p>
-          <p class="pdf-note i"><b aria-hidden="true">i</b>The shrunk copy is made of page images, so its text can’t be selected. Your original stays untouched.</p>
-        </div>
-      </div>
+      <div class="row-art"><div class="halo gold"></div><img class="device" src="assets/media/iphone-pdf-compressing-dark.webp" width="720" height="1469" alt="Shrink compressing a PDF: a saucer shines its beam on the pages, 72 percent done" loading="lazy" decoding="async"></div>
       <div class="row-copy rise">
-        <span class="eyebrow">PDFs · Step 2 · The look</span>
-        <h2>Color or black &amp; white. <em>Your call.</em></h2>
-        <p class="lede">Black &amp; white is the way to get a scan under a small limit and keep the text sharp. Shrink says plainly what each choice costs, and asks before it turns a PDF of real text into page images.</p>
+        <span class="eyebrow">PDFs · Step 2 · The beam</span>
+        <h2>12 pages. <em>One beam.</em></h2>
+        <p class="lede">Tap Compress and the saucer goes over every page of the file. Shrink balances quality and resolution until the whole PDF is under your limit, and asks before it turns a PDF of real text into page images.</p>
       </div>
     </div>
 
     <div class="row" data-in>
-      <div class="row-art pdf-art" role="img" aria-label="The result: your PDF fits, 8.4 MB to 1.9 MB, with Preview pages, Save to Files and Share">
-        <div class="pdf-card">
-          <div class="pdf-fits">Your PDF fits.</div>
-          <div class="pdf-sizes"><small>8.4 MB</small><span aria-hidden="true">→</span>1.9 MB</div>
-          <div class="pdf-btns"><span>Preview pages</span><span>Share</span></div>
-          <div class="pdf-go">Save to Files</div>
-        </div>
-      </div>
+      <div class="row-art"><div class="halo"></div><img class="device" src="assets/media/iphone-pdf-result-light.webp" width="720" height="1469" alt="Shrink result: your PDF fits, 8.4 MB to 1.9 MB, with Preview pages, Save to Files and Share" loading="lazy" decoding="async"></div>
       <div class="row-copy rise">
         <span class="eyebrow">PDFs · Step 3 · The proof</span>
-        <h2>Check every page. <em>Then save.</em></h2>
-        <p class="lede">Flip through the pages before and after, then save to Files or share. It all happens on your iPhone, even in Airplane Mode.</p>
-        <p class="keys-note">An example screen. Results depend on the file and the limit. One purchase covers photos and PDFs: 3 free exports to start.</p>
+        <h2>See exactly <em>what you saved.</em></h2>
+        <p class="lede">Flip through the pages before and after, then save to Files or share the PDF straight to the portal that was complaining. It all happens on your iPhone, even in Airplane Mode.</p>
+        <div class="saved" aria-label="Example: a 12-page PDF, 8.4 MB before, 1.9 MB after, 77 percent smaller">
+          <div class="saved-sizes"><small>8.4 MB</small><span aria-hidden="true">→</span>1.9 MB</div>
+          <div class="bars"><em>Before</em><span></span><b>After</b><span class="after pdf"></span></div>
+          <div class="saved-pct"><span data-count="77">77</span>% smaller</div>
+        </div>
+        <p class="keys-note">An example with a 12-page scan. Results depend on the file and the limit. One purchase covers photos and PDFs: 3 free exports to start.</p>
       </div>
     </div>
   </div>
