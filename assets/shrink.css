@@ -167,6 +167,7 @@ p{color:var(--muted);text-wrap:pretty}
 .js .bars span{transform:scaleX(0)}
 .bars span.after{background:#34D46B;width:2.3%;min-width:16px;transition-delay:.9s}
 .bars span.after.pdf{width:22.6%}
+.bars span.after.video{width:10.9%}
 .js .in .bars span{transform:none}
 .saved-pct{text-align:center;margin-top:14px;font-weight:800;font-size:1.25rem;color:#1E8E4E}
 
@@ -300,3 +301,7 @@ footer{padding:48px 0 calc(40px + env(safe-area-inset-bottom));font-size:.92rem}
 .source p{max-width:30em}
 .source-go{color:var(--text);font-weight:700;margin-top:6px}
 @media (max-width:760px){.two{grid-template-columns:1fr}}
+
+/* Three sources: photos, videos, PDFs. */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:980px){.three{grid-template-columns:1fr}}
